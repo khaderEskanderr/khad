@@ -15,9 +15,10 @@ class CreateViewesTable extends Migration
     {
         Schema::create('viewes', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->integer('viewers');
-            $table->string('create_up');
+            $table->text('user_id');
+            $table->text('product_id');
+            $table->string('value');
+            $table->string('creat_up');
             $table->string('update_up');
             $table->timestamps();
         });

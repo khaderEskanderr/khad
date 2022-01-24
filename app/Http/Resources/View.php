@@ -4,15 +4,15 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class User extends JsonResource
+class View extends JsonResource
 {
 
     public function toArray($request)
     {
         return [
-            'name' => $this->name,
-            'email' => $this->email,
-            'password' => $this->password,
+            'user_id' => $this->user_id,
+            'product_id' => $this->product_id,
+            'value' => $this->value,
             'creat_up' => $this->creat_up->format('d/m/Y'),
             'update_up' => $this->update_up->format('d/m/Y')
         ];

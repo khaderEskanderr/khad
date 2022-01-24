@@ -16,7 +16,7 @@ class User extends Authenticatable
     protected $table = "users";
     public $timestamps = false;
     protected $fillable = [
-        'name', 'email', 'password'
+        'name', 'email', 'password','mobilePhone'
 
     ];
 
@@ -29,11 +29,14 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function likes()
-    {
-        return $this->belongsToMany('App\Post',
-            'likes',
-            'user_id',
-            'post_id');
-    }
+//    public function likes()
+//    {
+//        return $this->belongsToMany('App\Post',
+//            'likes',
+//            'user_id',
+//            'post_id');
+//    }
+
+
+
 }

@@ -31,7 +31,7 @@ class CategoryController extends Controller
 
     public function show($id)
     {
-        $category = Category::query()->find($id);
+        $category = Category::find($id);
         if (is_null($category)) {
             return $this->SendError('category not found');
         }
